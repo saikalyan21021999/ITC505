@@ -1,11 +1,204 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Homework 1</title>
-    </head>
-    <body>
-        <p>
-            I did my homework! Yay
-        </p>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen Website</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            flex: 1; /* Allow the main container to grow and fill remaining vertical space */
+            position: relative; /* Positioning context for absolutely positioned elements inside */
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        
+        header h1 {
+            margin: 0;
+            text-align: center;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .navbar li {
+            margin: 0 10px;
+        }
+        
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar a:hover {
+            color: #ffd700;
+        }
+        
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        section {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Ensure sections are in the normal flow but can have absolutely positioned children */
+        }
+        
+        section h2 {
+            text-align: center;
+        }
+        
+        section p {
+            text-align: center;
+        }
+        
+        .product {
+            text-align: center;
+            margin-top: 20px;
+            position: relative; /* Allow positioning of absolutely positioned elements inside */
+        }
+        
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Absolute positioning example */
+        .product .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 5px;
+        }
+        
+        .product:hover .overlay {
+            opacity: 1;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+        
+        /* Media Query for responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pen Website</h1>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="home">
+            <h2>Welcome to Pen Website</h2>
+            <p>Your ultimate source for premium pens.</p>
+            <p><a href="#about">Learn more about us &rarr;</a></p>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Discover the story behind Pen Website and our mission.</p>
+            <p><a href="#products">Explore our products &rarr;</a></p>
+        </section>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/155908435/photo/fountain-pen.webp?b=1&s=170667a&w=0&k=20&c=AG6P_6O0I3OS3-Y7k_jkaViTnDJNmvcUOwUCa9NGTTs=" alt="Pen 1">
+                <div class="overlay">
+                    <h3>Classic Pen</h3>
+                    <p>A timeless pen design.</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/944857950/photo/ballpoint-pen.webp?b=1&s=170667a&w=0&k=20&c=U3I53ZdwZrzxXKw0yt3aIGEXMvlFA_6fvGbjoqL2iao=" alt="Pen 2">
+                <div class="overlay">
+                    <h3>Elegant Pen</h3>
+                    <p>For those who appreciate sophistication.</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://media.istockphoto.com/id/1372820614/photo/office-pen-isolated-on-white-background.webp?b=1&s=170667a&w=0&k=20&c=OhN8cj1bvvOfd4QN-wXI2xMkF0t7KA6VeaqGM5Mug_g=" alt="Pen 3">
+                <div class="overlay">
+                    <h3>Modern Pen</h3>
+                    <p>Sleek and futuristic.</p>
+                </div>
+            </div>
+            <p><a href="#contact">Contact us for more information &rarr;</a></p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Reach out to us for inquiries or feedback.</p>
+            <p><a href="#home">Back to Home &uarr;</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pen Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
