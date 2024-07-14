@@ -148,3 +148,6 @@ addNewStoryPart("newPart", {
     ],
     image: "new-image-url.jpg"
 });
+
+    var x = document.lastModified;
+    document.getElementById('lastModified').textContent = x;
