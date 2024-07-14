@@ -4,103 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 6 - Number Guessing Game</title>
-    <style>
-        /* General styles */
-        body {
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-            grid-template-columns: auto 200px 1fr 200px auto;
-            min-height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-
-        /* Header */
-        header {
-            grid-column: 1 / -1;
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            grid-row: 2 / span 1;
-            grid-column: 1 / 2;
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-right: 1px solid #ccc;
-        }
-
-        .sidebar nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .sidebar nav ul li {
-            margin-bottom: 10px;
-        }
-
-        .sidebar nav ul li a {
-            color: #333;
-            text-decoration: none;
-            display: block;
-            padding: 5px 10px;
-            transition: background-color 0.3s;
-        }
-
-        .sidebar nav ul li a:hover {
-            background-color: #ddd;
-        }
-
-        /* Main content */
-        main {
-            grid-row: 2 / span 1;
-            grid-column: 3 / 4;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            text-align: center;
-        }
-
-        /* Advertisement */
-        .advertisement {
-            grid-row: 2 / span 1;
-            grid-column: 4 / 5;
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-left: 1px solid #ccc;
-            text-align: center;
-        }
-
-        .advertisement img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        /* Footer */
-        footer {
-            grid-column: 1 / -1;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .addendum {
-            text-align: left;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #ddd;
-            border-radius: 5px;
-            color: #333;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -131,8 +35,8 @@
     
     <aside class="advertisement">
         <h2>Advertisement</h2>
-        <a href="https://www.amazon.com/Apple-Smartwatch-Starlight-Aluminum-Resistant/dp/B0CSV946N8/ref=sr_1_3?crid=SJW5IZFKF504&dib=eyJ2IjoiMSJ9.ZsuWeYI3G_Ii4UMUvhxhO5zurr284iMveZtiNrQys4uSa4RdGcDmlksmpspHUcc41ymnNIMi7X-4atdYwfwIGDcKKMhrBReS3PJgjNntZok20qb-g0AVvyw2lkf4zu8Q2jWmvuMsKQ33IJCYXlDYEUgcKo2Ai4uFD4mstBhJhQMl3mMtt_zqKcrvLdX9brgUEunUqdaovpYn36o4-vrQLJYk9YQcxFeEih-BeXruNgQ.DFEtdOLaHZP1qhXyCcTlfuvTLPnOImhhipu_QDvaOqs&dib_tag=se&keywords=apple+watch+9+series+41mm+gps&qid=1720379149&sprefix=apple+watch+9+series+41mm+gps%2Caps%2C152&sr=8-3" target="_blank">
-            <img src="https://m.media-amazon.com/images/I/61lhNV3vDjL._AC_SX466_.jpg" alt="Advertisement Image">
+        <a href="https://www.amazon.com/" target="_blank">
+            <img src="https://via.placeholder.com/200x200" alt="Advertisement Image">
         </a>
     </aside>
     
