@@ -1,77 +1,113 @@
-body,
-html {
+/* Reset default styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: 'Verdana', sans-serif;
 }
 
-.container {
-    display: flex;
-    height: 100%;
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+    padding-bottom: 50px; /* Space for footer */
 }
 
+/* Header styles */
 header {
-    background: linear-gradient(to right, #1e3c72, #2a5298);
+    background-color: #333;
     color: #fff;
-    padding: 20px;
     text-align: center;
-    width: 100%;
+    padding: 10px 0;
 }
 
-aside {
-    background: #333;
-    color: #fff;
-    padding: 20px;
-    flex: 1;
+header h1 {
+    margin: 0;
 }
 
-nav ul {
-    list-style: none;
+.padding-0
+{
     padding: 0;
 }
 
-nav ul li {
-    margin: 10px 0;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
+/* Main content styles */
 main {
-    padding: 20px;
-    flex: 3;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: calc(100vh - 150px); /* Adjust height based on header and footer heights */
 }
 
-#game-container {
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin: auto;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-button:hover {
+form button:hover {
     background-color: #45a049;
 }
 
-footer {
-    background: #333;
-    color: #fff;
+#formMessage {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Details display area styles */
+#detailsContainer {
+    margin-top: 20px;
+    margin: auto;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+#detailsContainer p {
+    margin-bottom: 10px;
+}
+
+/* Footer styles */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
     text-align: center;
+    padding: 10px 0;
 }
