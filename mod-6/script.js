@@ -16,7 +16,7 @@ myForm.addEventListener('submit', function(event) {
         formMessage.textContent = "Form submitted successfully!";
         formMessage.style.color = "green";
         resetForm();
-    }
+    } 
 });
 
 // Function to validate form inputs
