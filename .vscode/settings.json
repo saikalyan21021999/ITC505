@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/375faf63-8109-44b6-b789-ec0110a454a2/resourceGroups/saikalyan_group/providers/Microsoft.Web/sites/saikalyan",
+    "appService.deploySubpath": "lab-7"
+}

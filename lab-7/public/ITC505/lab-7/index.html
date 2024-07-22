@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mad Libs Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Mad Libs Form</h1>
+  <form action="/ITC505/lab-7/index.html" method="post">
+    <label for="pluralNoun">Plural Noun:</label>
+    <input type="text" id="pluralNoun" name="pluralNoun" required><br><br>
+
+    <label for="adjective">Adjective:</label>
+    <input type="text" id="adjective" name="adjective" required><br><br>
+
+    <label for="verb">Verb:</label>
+    <input type="text" id="verb" name="verb" required><br><br>
+
+    <label for="number">Number:</label>
+    <input type="text" id="number" name="number" required><br><br>
+
+    <label for="celebrity">Celebrity:</label>
+    <input type="text" id="celebrity" name="celebrity" required><br><br>
+
+    <button type="submit">Generate Mad Libs</button>
+  </form>
+
+  
+    <section class="addendum">
+      <h2>Addendum: Explanation of Code Choices</h2>
+      <p>
+        The HTML form collects user input for a Mad Libs game. Each input field (Plural Noun, Adjective, Verb, Number, Celebrity) is required to ensure all parts of the Mad Libs story can be completed.
+      </p>
+      <p>
+        The form submits data to the server using the POST method. The server-side script (express.js) processes the form submission, validates the inputs, and constructs a Mad Libs story dynamically using template literals.
+      </p>
+      <p>
+        If any input field is missing, the server responds with an error message. Otherwise, it generates the Mad Libs story and sends it back to the client for display.
+      </p>
+      <p>
+        Styling is applied using CSS (styles.css) to ensure readability, usability, and responsiveness across different devices.
+      </p>
+      <p>
+        The footer displays the last modified date of this HTML file using JavaScript to fetch and update the date dynamically.
+      </p>
+    </section>
+  <!-- Footer for last modified date -->
+  <footer>
+    <p>Last updated: 
+      <span id="lastModified"></span>
+    </p>
+  </footer>
+  <script type="text/javascript">
+    var x = document.lastModified;
+    document.getElementById('lastModified').textContent = x;
+  </script>
+</body>
+</html>
