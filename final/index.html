@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Lights Out</h1>
+        <div id="game-board"></div>
+    </div>
+
+    <!-- Addendum Section -->
+    <section id="addendum">
+        <h2>Addendum</h2>
+        <p>
+            The development of the "Lights Out" game involved in the several key steps: creating a 5x5 grid using CSS Grid, implementing toggle logic for cells and their neighbors, and ensuring the board starts in a random but solvable state. The primary challenge was ensuring solvability, which was achieved by performing random toggles on an initially all-off board. Managing click events and ensuring correct cell toggling required careful indexing and boundary checks.
+        </p>
+        <p>
+            Creative choices included the using `classList.toggle` for the smooth state transitions and CSS Grid for a responsive layout. The game checks if all cells are off after each move to the trigger a win alert. Insights gained include the importance of modularity in the simplifying the development process, the utility of CSS Grid for layout management, and the efficiency of event delegation for interactive applications. By addressing these challenges and leveraging these insights, the game provides an engaging and visually appealing user experience.
+        </p>
+    </section>
+
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
